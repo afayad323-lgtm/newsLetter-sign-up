@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>accept</title>
+  </head>
+  <body>
+    <div class="accept-container">
+      <img
+        src="newsletter-sign-up-with-success-message-main/assets/images/icon-list.svg"
+        alt=""
+      />
+      <h1>Thanks for your subscribing</h1>
+      <p>
+        A confirmation email has been sent to <span class="email"></span> please
+        open it and click confirm button
+      </p>
+      <button>Dismiss message</button>
+    </div>
+    <script>
+      let span = document.querySelector(".email");
+      span.textContent = localStorage.getItem("user");
+
+      let dismissBtn = document.querySelector("button");
+      dismissBtn.addEventListener("click", function () {
+        window.location.href = "index.html";
+      });
+    </script>
+  </body>
+</html>
